@@ -1,0 +1,3 @@
+<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>History - EduGenie</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<nav><div class="brand">🎓 EduGenie</div><div><a href="/">Home</a><a href="/logout">Logout</a></div></nav><main><h1>Learning History</h1>
+{% for r in rows %}<div class="card hist"><small>{{r['feature']}} • {{r['created_at']}}</small><h3>{{r['prompt']}}</h3><pre>{{r['response']}}</pre></div>{% else %}<div class="card">No history yet.</div>{% endfor %}</main></body></html>

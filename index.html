@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EduGenie</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<nav><div class="brand">🎓 EduGenie</div><div><a href="/">Home</a>{% if user %}<a href="/history">History</a><a href="/logout">Logout</a>{% else %}<a href="/login">Login</a><a class="pill" href="/register">Register</a>{% endif %}</div></nav>
+<header class="hero"><div><span class="tag">GENERATIVE AI • GEMINI POWERED</span><h1>Your AI Learning Assistant</h1><p>Learn faster with AI-powered explanations, notes, quizzes, summaries and coding help.</p></div></header>
+<main>
+<section class="chat card"><h2>🤖 Ask EduGenie</h2><div id="chat"></div><div class="inputrow"><input id="question" placeholder="Ask a question, e.g. Explain DBMS normalization"><button onclick="ask()">Ask</button></div></section>
+<section class="tools"><h2>Learning Tools</h2><div class="grid">
+<div class="card tool"><h3>📝 Notes Generator</h3><input id="notes" placeholder="Enter topic"><button onclick="generate('Notes','notes')">Generate Notes</button></div>
+<div class="card tool"><h3>❓ Quiz Generator</h3><input id="quiz" placeholder="Enter topic"><button onclick="generate('Quiz','quiz')">Generate Quiz</button></div>
+<div class="card tool"><h3>📌 Summarizer</h3><input id="summary" placeholder="Enter topic"><button onclick="generate('Summary','summary')">Summarize</button></div>
+<div class="card tool"><h3>💻 Coding Assistant</h3><input id="coding" placeholder="e.g. Python functions"><button onclick="generate('Coding','coding')">Explain & Code</button></div>
+</div></section>
+<section class="about card"><h2>About EduGenie</h2><p>EduGenie demonstrates how Generative AI can support education using Google's Gemini API, Python Flask, SQLite, HTML, CSS and JavaScript.</p></section>
+</main><footer>EduGenie • B.Sc Computer Science Project</footer>
+<script src="/static/app.js"></script></body></html>
